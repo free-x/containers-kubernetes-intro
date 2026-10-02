@@ -16,7 +16,6 @@ spec:
     spec:
       automountServiceAccountToken: false
       enableServiceLinks: false
-      hostUsers: false
       volumes:
         - name: html-volume
           persistentVolumeClaim:
@@ -24,8 +23,6 @@ spec:
       containers:
         - name: demo
           image: quay.io/ghilling/spring-demo:1.1
-          securityContext:
-            runAsUser: 1001
           ports:
             - containerPort: 8080
           startupProbe:
@@ -58,7 +55,6 @@ spec:
           volumeMounts:
             - name: html-volume
               mountPath: /var/demo/html
-              readOnly: true
           resources:
             requests:
               cpu: "100m"
