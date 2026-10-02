@@ -6,6 +6,8 @@ resources:
 
 configMapGenerator:
   - name: html-content
+    options:
+      immutable: true
     files:
       - html/index.html
 
