@@ -88,7 +88,7 @@ spec:
     spec:
       containers:
         - name: demo
-          image: quay.io/example/demo-app:1.0
+          image: quay.io/ghilling/spring-demo:1.0
 EOF
 
 oc apply -f /tmp/deployment-typo.yaml --validate=strict

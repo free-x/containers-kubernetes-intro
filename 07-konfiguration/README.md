@@ -8,7 +8,7 @@ Einfachste Methode zur Konfiguration von Containern:
 spec:
   containers:
     - name: demo
-      image: quay.io/example/demo-app:1.0
+      image: quay.io/ghilling/spring-demo:1.0
       env:
         - name: DEMO_HTML_DIR
           value: /var/demo/html
